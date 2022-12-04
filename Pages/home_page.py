@@ -10,3 +10,8 @@ class HomePage(BasePage):
     def logout(self):
         self.driver.find_element(By. CSS_SELECTOR, '.controls__logout > span').click()
         
+    def get_side_menus(self):
+        side_menus = self.driver.find_elements(By.CSS_SELECTOR, '.aside__label')
+        return{menu.text.lower() for menu in side_menus}
+        
+    

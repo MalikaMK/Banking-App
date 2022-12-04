@@ -13,41 +13,48 @@ def test_user_login(setup):
     driver = setup
     log_page = LoginPage(driver)
     log_page.user_login()
-    sleep(5)
-    assert 'Log Out' in driver.page_source
+    # sleep(5)
+    # assert 'Log Out' in driver.page_source
+    assert log_page.text_exists ('log Out') 
     
 def test_admin_login(setup):
     driver = setup
     log_page = LoginPage(driver)
     sleep(5)
     log_page.admin_login()
-    sleep(5)
-    assert 'Log Out' in driver.page_source
-   
-def test_login_with_blank_username(setup):
-    driver = setup
-    log_page = LoginPage(driver)
-    log_page.login_with_blank_username()
-    assert 'Field is required' in driver.page_source
+    # sleep(5)
+    # assert 'Log Out' in driver.page_source
+    assert log_page.text_exists ('log Out') 
+  
+        # we don`t need that case because we parametrize and keep test cases with invalid and blank data values `
+# def test_login_with_blank_username(setup):
+#     driver = setup
+#     log_page = LoginPage(driver)
+#     log_page.login_with_blank_username()
+#     assert 'Field is required' in driver.page_source
     
+          # we don`t need that case because we parametrize and keep test cases with invalid and blank data values `   
+# def test_login_with_incorrect_credentials(setup):
+#     driver = setup
+#     log_page= LoginPage(driver)
+#     sleep(5)
+#     log_page.login_with_incorrect_credentials()
+#     assert 'Wrong username or password.' in driver.page_source
 
-    
-def test_login_with_incorrect_credentials(setup):
-    driver = setup
-    log_page = LoginPage(driver)
-    log_page.login_with_incorrect_credentials()
-    sleep(5)
-    assert 'Wrong username or password.' in driver.page_source
 
-# prepering test data
+# preparing test data
 invalid_login_data = [
-    ('', '', 'Field irequireds'),
-    ('test', 'wrong' ,'Wrong username or password'),
-    ('abc', 'wrong' , 'Should be minimum 4 chars')
+    ('', '', 'Field is required'),
+    ('test' , 'Demo-Access1' ,'Wrong username or password.'),
+    ('abc', 'wrong' , 'Should be minimum 4 chars.')
 ]
 
 @pytest.mark.parametrize("username, password, checkpoint", invalid_login_data)
 def test_invalid_login(setup, username, password, checkpoint):
     driver = setup
-    login_page = LoginPage(driver)
-    login_page.login(username, password)
+    log_page = LoginPage(driver)
+    # sleep(3)
+    log_page.login(username, password)
+    # sleep(3)
+    # assert checkpoint in driver.page_source
+    assert log_page.text_exists (checkpoint)

@@ -8,6 +8,7 @@ def test_reports(setup):
     driver = setup
     log_page = LoginPage(driver)
     log_page.user_login()
+    sleep(5)
     report_page = ReportsPage(driver)
     report_page.reports()
     sleep(5)

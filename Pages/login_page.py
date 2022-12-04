@@ -13,16 +13,18 @@ class LoginPage(BasePage):
         
         
     def user_login(self):
+        # self.login('Demo-User', 'Demo-Access1') is replaced by 
         self.login(self.User, self.User_Password)
         
     def admin_login(self):
+        # self.login('Bank-Admin', 'Demo-Access1')
         self.login(self.Admin, self.Admin_password)
         
         
-    def login_with_blank_username(self):
-        self.login('', 'Demo-Access1')
+    # def login_with_blank_username(self):
+    #     self.login('', 'Demo-Access1')
      
         
-    def login_with_incorrect_credentials(self):
-        self.login('Test', 'Wrong')
+    # def login_with_incorrect_credentials(self):
+    #     self.login('Test', 'Wrong')
     
