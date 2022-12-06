@@ -8,9 +8,9 @@ from Logs.logger import logger
 
 def launch_app():
     driver = webdriver.Firefox()
-    logger.info('Launched the Firefox')
+    logger.info("Launched the {driver.name} {driver.capabilities ['browserVersion']}")
     driver.get(config.URL)
-    logger.info(f'Navigate to {config.URL}')
+    logger.info(f"Navigate to {config.URL}")
     driver.maximize_window()
     driver.implicitly_wait(10)
     return driver

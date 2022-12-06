@@ -14,8 +14,8 @@ def test_user_login(setup):
     log_page = LoginPage(driver)
     log_page.user_login()
     # sleep(5)
-    # assert 'Log Out' in driver.page_source
-    assert log_page.text_exists ('log Out') 
+    # assert 'Login' in driver.page_source
+    assert log_page.text_exists ('logout') 
     
 def test_admin_login(setup):
     driver = setup

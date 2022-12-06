@@ -1,5 +1,6 @@
 from time import sleep
 from config import config
+from Logs.logger import logger
 
 class BasePage:
    
@@ -17,7 +18,9 @@ class BasePage:
             if text.lower() not in self.driver.page_source.lower():
                 sleep(1)
                 wait+=1
+                logger.info(f'Waited for [{wait}] seconds for the [{text}]....')
             else:
+                logger.info(f'Found the [{text}] waited {wait} seconds....')
                 return True
+        logger.info (f'Text [{text}] was NOT found, waited {wait} seconds....')
         return False
-    

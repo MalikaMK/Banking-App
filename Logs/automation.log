@@ -1,3 +1,41 @@
 12/05/2022 09:05:58 PM Launched the Firefox
 12/05/2022 09:06:05 PM Navigate to https://demo.ebanq.com/log-in
 12/05/2022 09:06:09 PM Completed Test Case:test_user_logout
+12/05/2022 09:51:44 PM Launched the Firefox
+12/05/2022 09:51:50 PM Navigate to https://demo.ebanq.com/log-in
+12/05/2022 09:51:53 PM Found the [login] waited 0 seconds....
+12/05/2022 09:51:53 PM Completed Test Case:test_user_logout
+12/05/2022 10:55:24 PM Launched the Firefox
+12/05/2022 10:55:26 PM Navigate to https://demo.ebanq.com/log-in
+12/05/2022 10:55:31 PM Found the [login] waited 0 seconds....
+12/05/2022 10:55:31 PM Completed Test Case:test_user_logout
+12/05/2022 10:56:28 PM Launched the Firefox
+12/05/2022 10:56:30 PM Navigate to https://demo.ebanq.com/log-in
+12/05/2022 10:56:33 PM Found the [logout] waited 0 seconds....
+12/05/2022 10:56:33 PM Completed Test Case:test_user_logout
+12/05/2022 10:57:19 PM Launched the Firefox
+12/05/2022 10:57:21 PM Navigate to https://demo.ebanq.com/log-in
+12/05/2022 10:57:24 PM Found the [logout] waited 0 seconds....
+12/05/2022 10:57:24 PM Completed Test Case:test_user_logout
+12/05/2022 10:58:02 PM Launched the Firefox
+12/05/2022 10:58:04 PM Navigate to https://demo.ebanq.com/log-in
+12/05/2022 10:58:07 PM Found the [login] waited 0 seconds....
+12/05/2022 10:58:07 PM Completed Test Case:test_user_logout
+12/05/2022 11:00:21 PM Launched the Firefox
+12/05/2022 11:00:23 PM Navigate to https://demo.ebanq.com/log-in
+12/05/2022 11:00:27 PM Waited for [1] seconds for the [error]....
+12/05/2022 11:00:27 PM Found the [error] waited 1 seconds....
+12/05/2022 11:00:27 PM Completed Test Case:test_user_logout
+12/05/2022 11:02:56 PM Launched the Firefox
+12/05/2022 11:02:58 PM Navigate to https://demo.ebanq.com/log-in
+12/05/2022 11:03:00 PM Waited for [1] seconds for the [log Out]....
+12/05/2022 11:03:01 PM Waited for [2] seconds for the [log Out]....
+12/05/2022 11:03:01 PM Found the [log Out] waited 2 seconds....
+12/05/2022 11:03:01 PM Completed Test Case:test_user_login
+12/05/2022 11:03:49 PM Launched the Firefox
+12/05/2022 11:03:51 PM Navigate to https://demo.ebanq.com/log-in
+12/05/2022 11:03:52 PM Found the [login] waited 0 seconds....
+12/05/2022 11:03:52 PM Completed Test Case:test_user_login
+12/05/2022 11:05:19 PM Launched the Firefox
+12/05/2022 11:05:21 PM Navigate to https://demo.ebanq.com/log-in
+12/05/2022 11:05:26 PM Completed Test Case:test_landing_page
