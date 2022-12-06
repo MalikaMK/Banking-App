@@ -1,11 +1,11 @@
 from time import sleep
+from config import config
 
 class BasePage:
-    User = 'Demo-User'
-    User_Password = 'Demo-Access1'
-    Admin = 'Bank-Admin'
-    Admin_password = 'Demo-Access1'
-    TIMEOUT = 15   #separate variable recomended for for standart timeout
+   
+    #separate variable recomended for for standart timeout
+    TIMEOUT = config.TIMEOUT 
+    
     
     def __init__(self, driver) -> None:
         self.driver = driver

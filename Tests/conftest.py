@@ -3,10 +3,14 @@ from selenium import webdriver
 from datetime import datetime
 import os
 from Pages.login_page import LoginPage
+from config import config
+from Logs.logger import logger
 
 def launch_app():
     driver = webdriver.Firefox()
-    driver.get('https://demo.ebanq.com/log-in')
+    logger.info('Launched the Firefox')
+    driver.get(config.URL)
+    logger.info(f'Navigate to {config.URL}')
     driver.maximize_window()
     driver.implicitly_wait(10)
     return driver
@@ -15,6 +19,7 @@ def teardown(driver):
     # take a screenshot
     test_name = os.environ.get('PYTEST_CURRENT_TEST').split(':')[-1].split(' ')[0]
     timestamp = datetime.now().strftime('%m%d%y_%H%M%S')
+    logger.info(f'Completed Test Case:{test_name}')
     # for screenshot with timestamp variable 
     # driver.save_screenshot(f'.\evidence\{timestamp}.png') OR 
     driver.save_screenshot(fr'.\evidence\{test_name}_{timestamp}.png')   
